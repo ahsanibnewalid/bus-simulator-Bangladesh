@@ -248,6 +248,14 @@ public static class ProjectBuilder {
         GraphicsSettings.defaultRenderPipeline=pipeline;QualitySettings.renderPipeline=pipeline;QualitySettings.vSyncCount=0;
         Time.fixedDeltaTime=.02f;
     }
+    // Unity Build Automation pre-export hook: let UBA own player export and signing.
+    public static void PrepareCloudBuild() {
+        Generate();
+        AddressableAssetSettings.BuildPlayerContent(out var result);
+        if(!string.IsNullOrEmpty(result.Error))throw new Exception(result.Error);
+        EditorBuildSettings.scenes=new[]{new EditorBuildSettingsScene(BootPath,true)};
+        AssetDatabase.SaveAssets();
+    }
     [MenuItem("Nusantara/Build Android APK")]
     public static void BuildAndroid() {
         if(!EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Android,BuildTarget.Android))throw new Exception("Android build support is not installed");
