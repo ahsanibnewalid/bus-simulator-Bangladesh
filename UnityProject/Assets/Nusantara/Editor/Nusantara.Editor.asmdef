@@ -1,0 +1,14 @@
+{
+  "name": "Nusantara.Editor",
+  "references": [
+    "Nusantara.Runtime",
+    "Unity.RenderPipelines.Universal.Runtime",
+    "Unity.RenderPipelines.Core.Runtime",
+    "Unity.Addressables.Editor",
+    "Unity.Addressables",
+    "Unity.ResourceManager"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ]
+}

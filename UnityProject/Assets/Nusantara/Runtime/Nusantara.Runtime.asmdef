@@ -1,0 +1,10 @@
+{
+  "name": "Nusantara.Runtime",
+  "references": [
+    "UnityEngine.UI",
+    "Unity.Addressables",
+    "Unity.ResourceManager",
+    "Unity.RenderPipelines.Universal.Runtime",
+    "Unity.RenderPipelines.Core.Runtime"
+  ]
+}

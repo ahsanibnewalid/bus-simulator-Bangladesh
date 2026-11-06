@@ -3,3 +3,18 @@ local.properties
 **/build/
 .idea/
 *.iml
+# Unity local/generated state
+UnityProject/[Ll]ibrary/
+UnityProject/[Tt]emp/
+UnityProject/[Oo]bj/
+UnityProject/[Bb]uilds/
+UnityProject/[Ll]ogs/
+UnityProject/[Uu]ser[Ss]ettings/
+UnityProject/Assets/Nusantara/Generated/
+UnityProject/Assets/Nusantara/Generated.meta
+*.csproj
+*.sln
+*.user
+unity-test-results/
+*.keystore
+*.jks
