@@ -11,6 +11,14 @@ Unity **6000.0.60f1**, URP **17.0.4**, Android ARM64 / IL2CPP. The original Java
 
 Generation rebuilds the generated scenes. Save custom art in a separate directory; do not hand-edit Generated scenes and then regenerate without a backup.
 
+## Build from a phone with Unity Cloud
+The Unity Build Automation target is named **Nusantara Heavy Android APK**.
+In Unity Dashboard, open the Nusantara Heavy project → Build Automation → Configurations → that target → Build.
+The target reads `main`, uses the `UnityProject` subfolder and the version in ProjectVersion.txt, exports an APK with a development keystore, and runs EditMode tests.
+Its Pre-Export method is `Nusantara.Editor.ProjectBuilder.PrepareCloudBuild`, which generates Boot and scenery and builds Addressables before UBA exports the player.
+Automatic builds and recurring schedules are off. The selected Windows Micro builder is free-tier eligible; check the remaining allowance before starting additional builds.
+A finished successful build exposes the APK under its Artifacts tab. Unity Cloud manages its own Editor activation; this route does not use the repository's GameCI activation secrets.
+
 ## Controls
 - Mobile: simultaneous LEFT/RIGHT + DRIVE/BRAKE; DOOR, HORN, signals, retarder, headlights and camera.
 - Editor: W/S = accelerator/brake, A/D = steering, H = horn, O = doors. Mouse can operate touch buttons.
