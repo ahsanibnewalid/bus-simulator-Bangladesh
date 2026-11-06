@@ -3,8 +3,6 @@
   "references": [
     "Nusantara.Runtime",
     "Nusantara.Editor",
-    "UnityEngine.TestRunner",
-    "UnityEditor.TestRunner",
     "Unity.RenderPipelines.Universal.Runtime",
     "Unity.RenderPipelines.Core.Runtime"
   ],
