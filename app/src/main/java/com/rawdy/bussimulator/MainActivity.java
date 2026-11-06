@@ -134,7 +134,7 @@ public class MainActivity extends Activity {
             }
             // Draw distant vehicles first for correct occlusion.
             List<float[]> sorted=new ArrayList<>(Arrays.asList(traffic));
-            sorted.sort((a,b)->Float.compare(b[1],a[1]));
+            Collections.sort(sorted, (a,b)->Float.compare(b[1],a[1]));
             for(float[] car:sorted) {
                 if(car[1]<=0||car[1]>1200) continue;
                 float d=1-car[1]/1200, depth=d*d;
